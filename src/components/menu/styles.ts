@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div<{ openMenu: boolean }>`
     width: ${({ openMenu }) => openMenu ? '300px' : '100px'};
-    height: 100vh;
+    height: calc(100vh - 55px);
     box-sizing: border-box;
-    padding: 65px 10px 10px 10px;
+    padding: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     overflow-y: auto;
+    position: sticky;
+    top: 55px;
 `;
 
 export const MenuItem = styled.div<{ openMenu: boolean }>`

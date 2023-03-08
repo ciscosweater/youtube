@@ -25,30 +25,36 @@ import YoutubeIcon from '../../assets/menuIcons/youtube.png';
 import YoutubeKidsIcon from '../../assets/menuIcons/youtube-kids.png';
 import YoutubeMusicIcon from '../../assets/menuIcons/youtube-music.png';
 import YoutubeTvIcon from '../../assets/menuIcons/youtube-tv.png';
+import { useNavigate } from 'react-router-dom';
 
 const firstItems = [
     {
         title: "Início",
-        icon: HomeIcon
+        icon: HomeIcon,
+        nav: "/"
     },
     {
         title: "Shorts",
-        icon: ShortsIcon
+        icon: ShortsIcon,
+        nav: "/shorts"
     },
     {
         title: "Inscrições",
-        icon: SubscribeIcon
+        icon: SubscribeIcon,
+        nav: "/subscriptions"
     }
 ]
 
 const secondItems = [
     {
         title: "Biblioteca",
-        icon: LibraryIcon
+        icon: LibraryIcon,
+        nav: '/library'
     },
     {
         title: "Histórico",
-        icon: HistoryIcon
+        icon: HistoryIcon,
+        nav: "/history"
     }
 ]
 
@@ -185,18 +191,19 @@ const secondLinks = [
 
 function Menu() {
     const { openMenu } = useContext(MenuContext);
+    const navigate = useNavigate();
 
     return (
         <Container openMenu={openMenu}>
             {firstItems.map((element) => (
-                <MenuItem openMenu={openMenu}>
+                <MenuItem openMenu={openMenu} onClick={() => navigate(element.nav)}>
                     <ButtonIcon alt="" src={element.icon} />
                     <span>{element.title}</span>
                 </MenuItem>
             ))}
             <MenuDiv openMenu={openMenu} />
             {secondItems.map((element) => (
-                <MenuItem openMenu={openMenu}>
+                <MenuItem openMenu={openMenu} onClick={() => navigate(element.nav)}>
                     <ButtonIcon alt="" src={element.icon} />
                     <span>{element.title}</span>
                 </MenuItem>
