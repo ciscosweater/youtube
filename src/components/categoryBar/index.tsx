@@ -44,6 +44,22 @@ function CategoryBar() {
         {
             title: "The Legend of Zelda",
             id: 10
+        },
+        {
+            title: "Dragon Ball",
+            id: 11
+        },
+        {
+            title: "Grand Theft Auto",
+            id: 12
+        },
+        {
+            title: "Xbox",
+            id: 13
+        },
+        {
+            title: "Unboxing",
+            id: 14
         }
     ]
 

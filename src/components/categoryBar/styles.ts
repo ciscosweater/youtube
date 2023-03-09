@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 50px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -10,9 +9,11 @@ export const Container = styled.div`
 `;
 
 export const ItemContainer = styled.div`
-    width: 1000px;
+    width: 95%;
     justify-content: space-around;
     display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
 `;
 
 export const CategoryItem = styled.div<{ isActive: boolean }>`
@@ -27,6 +28,7 @@ export const CategoryItem = styled.div<{ isActive: boolean }>`
     background-color: ${({ isActive }) => isActive ? "#0f0f0f" : "#f2f2f2"};
     color: ${({ isActive }) => isActive ? "#fff" : "#000"};
     transition: 0.25s;
+    margin-top: 10px;
 
     span {
     padding: 0 10px 2px 10px;

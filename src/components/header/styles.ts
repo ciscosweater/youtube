@@ -10,6 +10,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     position: sticky;
+    z-index: 2;
     top: 0px;
 `;
 
@@ -27,6 +28,7 @@ export const ButtonContainer = styled.div<{ margin?: string }>`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: 0.25s;
 
     :hover {
         background-color: #f2f2f2;
@@ -69,6 +71,10 @@ export const SearchButton = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    :hover {
+        background-color: #f2f2f2;
+    }
 `;
 
 export const HeaderButton = styled.div`

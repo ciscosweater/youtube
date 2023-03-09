@@ -24,6 +24,7 @@ export const MenuItem = styled.div<{ openMenu: boolean }>`
     flex-direction: ${({ openMenu }) => openMenu ? 'row' : 'column'};
     align-items: center;
     justify-content: ${({ openMenu }) => openMenu ? 'none' : 'center'};
+    transition: 0.25s;
 
     span {
         font-weight: ${({ openMenu }) => openMenu ? '400' : '400'};
@@ -68,6 +69,7 @@ export const LoginButton = styled.div<{ openMenu: boolean }>`
     align-items: center;
     cursor: pointer;
     margin-left: -50px;
+    transition: 0.25s;
 
     p {
         font-size: 0.9em;

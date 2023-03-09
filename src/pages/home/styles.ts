@@ -2,11 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    max-width: 1600px;
+    max-width: 1800px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     row-gap: 40px;
+`;
+
+export const VideoContainer = styled.div`
+    width: 100%;
 `;
 
 export const SectionDivider = styled.div`
@@ -37,6 +41,27 @@ export const ShortsTitle = styled.span`
 export const ShortsVideoContainer = styled.div`
     display: flex;
     width: 90%;
-    align-items: center;
+    align-items: start;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+`;
+
+export const ShowMoreDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 40px;
+    margin-bottom: -38px;
+    cursor: pointer;
+
+    :hover {
+        background-color: #e0e0e0;
+    }
+`;
+
+export const ShowMoreImg = styled.img`
+    width: 18px;
+    height: 18px;
 `;
