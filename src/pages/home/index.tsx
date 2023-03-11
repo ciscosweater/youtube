@@ -128,7 +128,7 @@ function Home() {
         }
     ]
 
-    const shortsRender = shortsVideos.slice(0, openMenu ? 7 : 8)
+    const shortsRender = shortsVideos.slice(0, 8)
 
     const moreVideos = [
         {
