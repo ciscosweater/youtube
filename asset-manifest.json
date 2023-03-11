@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/youtube/static/css/main.883e9615.css",
+    "main.js": "/youtube/static/js/main.653a65c6.js",
+    "static/media/youtube-logo.png": "/youtube/static/media/youtube-logo.56c8d2c5902dd60de4a7.png",
+    "static/media/sports.png": "/youtube/static/media/sports.b01293696527ddfd26a0.png",
+    "static/media/youtube-kids.png": "/youtube/static/media/youtube-kids.c9ee9e66d31d08334ab0.png",
+    "static/media/settings.png": "/youtube/static/media/settings.d1118b10847703602e82.png",
+    "static/media/console.png": "/youtube/static/media/console.48960ffaee895a6b5754.png",
+    "static/media/login.png": "/youtube/static/media/login.48da524dee9f939382a2.png",
+    "static/media/add.png": "/youtube/static/media/add.132696644e79a1f05c3b.png",
+    "static/media/question.png": "/youtube/static/media/question.a97e45146636971d8892.png",
+    "static/media/learning.png": "/youtube/static/media/learning.ca069a8c9c800e909f66.png",
+    "static/media/trending.png": "/youtube/static/media/trending.16ccb42cc6ac69321dd0.png",
+    "static/media/search.png": "/youtube/static/media/search.f2d70afd1ebdca42594e.png",
+    "static/media/history.png": "/youtube/static/media/history.65e3b3d173374e2b860a.png",
+    "static/media/live.png": "/youtube/static/media/live.1db50f85f8add429196e.png",
+    "static/media/bag.png": "/youtube/static/media/bag.9c816c6b923ef947a58e.png",
+    "static/media/ipod.png": "/youtube/static/media/ipod.b760e5e45109ee05b46a.png",
+    "static/media/shorts.png": "/youtube/static/media/shorts.0b57b59145fded44c3f0.png",
+    "static/media/home.png": "/youtube/static/media/home.2c3bbd45926640907cdd.png",
+    "index.html": "/youtube/index.html",
+    "main.883e9615.css.map": "/youtube/static/css/main.883e9615.css.map",
+    "main.653a65c6.js.map": "/youtube/static/js/main.653a65c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.883e9615.css",
+    "static/js/main.653a65c6.js"
+  ]
+}
