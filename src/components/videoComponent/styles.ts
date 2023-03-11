@@ -5,7 +5,7 @@ export const Container = styled.div`
     cursor: pointer;
 
     @media (max-width: 1910px) {
-        width: 300px;
+        width: 240px;
     }
 `;
 
@@ -23,7 +23,7 @@ export const ImageBanner = styled.img`
     }
 
     @media (max-width: 1910px) {
-        height: 169px;
+        height: 135px;
     }
 `;
 
@@ -37,6 +37,11 @@ export const ChannelImage = styled.img`
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+
+    @media (max-width: 1910px) {
+        width: 30px;
+        height: 30px;
+    }
 `;
 
 export const ChannelInitials = styled.div`

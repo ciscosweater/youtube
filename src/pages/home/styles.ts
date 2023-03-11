@@ -7,7 +7,6 @@ export const Container = styled.div`
     justify-content: space-evenly;
     flex-wrap: wrap;
     row-gap: 40px;
-    column-gap: 10px;
 `;
 
 export const VideoContainer = styled.div`
@@ -41,7 +40,7 @@ export const ShortsTitle = styled.span`
 
 export const ShortsVideoContainer = styled.div`
     display: flex;
-    width: 95%;
+    width: 100%;
     align-items: start;
     justify-content: space-evenly;
     flex-wrap: wrap;

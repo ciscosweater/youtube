@@ -5,7 +5,7 @@ export const Container = styled.div<{ openMenu: boolean }>`
     cursor: pointer;
 
     @media (max-width: 1910px) {
-        width: ${({ openMenu }) => openMenu ? "120px" : "150px"};
+        width: 120px;
     }
 `;
 
@@ -22,7 +22,7 @@ export const ImageBanner = styled.img<{ openMenu: boolean }>`
     }
 
     @media (max-width: 1910px) {
-        height: ${({ openMenu }) => openMenu ? "205px" : "260px"};
+        height: 205px;
     }
 `;
 

@@ -125,10 +125,20 @@ function Home() {
             imageSrc: "https://i.ytimg.com/vi/BhLrQJyTfF8/oar2.jpg?sqp=-oaymwEaCJUDENAFSFXyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBoRZbM7YSDilQVvJggOarpAol_wg",
             title: "O AVÔ DE VOLDEMORT ESTÁ...",
             views: "266 mil visualizações"
+        },
+        {
+            imageSrc: "https://i.ytimg.com/vi/MsB6kpILoF8/oar2.jpg?sqp=-oaymwEaCJUDENAFSFXyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBoRZbM7YSDilQVvJggOarpAol_wg",
+            title: "Did you know this about the PS3?",
+            views: "900 mil visualizações"
+        },
+        {
+            imageSrc: "https://i.ytimg.com/vi/OJuvywc7C0A/oar2.jpg?sqp=-oaymwEaCJUDENAFSFXyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBoRZbM7YSDilQVvJggOarpAol_wg",
+            title: "Ground Deformation - Far...",
+            views: "195 mil visualizações"
         }
     ]
 
-    const shortsRender = shortsVideos.slice(0, 8)
+    const shortsRender = shortsVideos.slice(0, openMenu ? 8 : 10)
 
     const moreVideos = [
         {
