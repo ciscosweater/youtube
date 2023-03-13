@@ -45,6 +45,10 @@ export const ShortsVideoContainer = styled.div`
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-bottom: -15px;
+    
+    @media (max-width: 1280px) {
+        row-gap: 20px;
+    }
 `;
 
 export const ShowMoreDiv = styled.div`

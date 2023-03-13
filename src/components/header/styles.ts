@@ -12,6 +12,11 @@ export const Container = styled.div`
     position: sticky;
     z-index: 2;
     top: 0px;
+
+    @media (max-width: 1280px) {
+        width: 100vw;
+        z-index: 999;
+    }
 `;
 
 export const LogoContainer = styled.div`
@@ -42,6 +47,10 @@ export const ButtonIcon = styled.img`
 
 export const SearchContainer = styled.div`
     display: flex;
+
+    @media (max-width: 1280px) {
+        display: none;
+    }
 `;
 
 export const SearchInputContainer = styled.div`

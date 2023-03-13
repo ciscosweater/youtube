@@ -11,6 +11,14 @@ export const Container = styled.div<{ openMenu: boolean }>`
     overflow-y: auto;
     position: sticky;
     top: 55px;
+
+    @media (max-width: 1280px) {
+        position: absolute;
+        background-color: #fff;
+        width: ${({ openMenu }) => openMenu ? '75vw' : '0px'};
+        padding: 0px;
+        z-index: 999;
+    }
 `;
 
 export const MenuItem = styled.div<{ openMenu: boolean }>`

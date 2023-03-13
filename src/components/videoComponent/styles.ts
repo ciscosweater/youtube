@@ -7,6 +7,10 @@ export const Container = styled.div`
     @media (max-width: 1910px) {
         width: 240px;
     }
+
+    @media (max-width: 1280px) {
+        width: 90%;
+    }
 `;
 
 export const ImageBanner = styled.img`
@@ -24,6 +28,10 @@ export const ImageBanner = styled.img`
 
     @media (max-width: 1910px) {
         height: 135px;
+    }
+
+    @media (max-width: 1280px) {
+        height: calc(90vw * 0.5625)
     }
 `;
 
