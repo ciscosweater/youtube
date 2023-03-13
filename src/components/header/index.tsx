@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ButtonContainer, ButtonIcon, Container, LogoContainer, SearchContainer, SearchInputContainer, SearchInput, SearchButton, HeaderButton, LoginButton, LoginIcon } from "./styles";
 import HamburguerIcon from '../../assets/menuIcons/hamburger.png';
-import Logo from '../../assets/youtube-logo.png';
+import oldLogo from '../../assets/oldLogo.png';
+import newLogo from '../../assets/newLogo.png';
 import SearchIcon from '../../assets/menuIcons/search.png';
 import MicIcon from '../../assets/menuIcons/mic.png';
 import VideoIcon from '../../assets/menuIcons/video.png';
@@ -11,22 +12,31 @@ import { MenuContext } from '../../contexts/menuContext';
 
 function Header() {
     const { openMenu, setOpenMenu } = useContext(MenuContext);
+    const [ currentLogo, setCurrentLogo ] = useState(newLogo);
 
     const handleClick = () => {
         setOpenMenu(!openMenu);
     };
 
+    const handleLogo = () => {
+        if (currentLogo === newLogo) {
+            setCurrentLogo(oldLogo)
+        } else {
+            setCurrentLogo(newLogo)
+        }
+    };
+
     return (
         <Container>
-
             <LogoContainer>
                 <ButtonContainer onClick={handleClick} margin='0 10px 0 0'>
                     <ButtonIcon alt="" src={HamburguerIcon} />
                 </ButtonContainer>
                 <img
-                    style={{ cursor: "pointer", width: "80px" }}
+                    onClick={handleLogo}
+                    style={{ cursor: "pointer", width: "80px", transition: "opacity 0.5s ease-in-out" }}
                     alt=""
-                    src={Logo}
+                    src={currentLogo}
                 />
             </LogoContainer>
 

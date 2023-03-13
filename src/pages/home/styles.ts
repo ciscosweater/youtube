@@ -48,6 +48,7 @@ export const ShortsVideoContainer = styled.div`
     
     @media (max-width: 1280px) {
         row-gap: 20px;
+        column-gap: 10px;
     }
 `;
 
