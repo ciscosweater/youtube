@@ -89,3 +89,47 @@ export const SearchButton = styled.div`
 export const HeaderButton = styled.div`
     display: flex;
 `;
+
+export const LoginButton = styled.div<{ openMenu: boolean }>`
+    display: flex;
+    border-radius: 20px;
+    height: 35px;
+    width: 135px;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 2px 0px 0px 10px;
+    transition: 0.25s;
+
+    p {
+        font-size: 0.9em;
+        font-weight: 600;
+        color: #1755d3;
+        padding-bottom: 2px;
+    }
+
+    :hover {
+        background-color: #def1ff;
+        outline: none;
+        border-color: #def1ff;
+    }
+
+    @media (max-width: 1280px) {
+        width: 40px;
+
+        p {
+            display: none;
+        }
+    }
+`;
+
+export const LoginIcon = styled.img`
+    width: 30px;
+    padding-right: 5px;
+
+    @media (max-width: 1280px) {
+        padding-right: 0px;
+    }
+`;

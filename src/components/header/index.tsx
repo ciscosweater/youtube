@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { ButtonContainer, ButtonIcon, Container, LogoContainer, SearchContainer, SearchInputContainer, SearchInput, SearchButton, HeaderButton } from "./styles";
+import { ButtonContainer, ButtonIcon, Container, LogoContainer, SearchContainer, SearchInputContainer, SearchInput, SearchButton, HeaderButton, LoginButton, LoginIcon } from "./styles";
 import HamburguerIcon from '../../assets/menuIcons/hamburger.png';
 import Logo from '../../assets/youtube-logo.png';
 import SearchIcon from '../../assets/menuIcons/search.png';
 import MicIcon from '../../assets/menuIcons/mic.png';
 import VideoIcon from '../../assets/menuIcons/video.png';
 import NotificationIcon from '../../assets/menuIcons/bell.png';
+import LoginPic from '../../assets/menuIcons/login.png';
 import { MenuContext } from '../../contexts/menuContext';
 
 function Header() {
@@ -48,9 +49,10 @@ function Header() {
                 <ButtonContainer margin='0 0 0 10px'>
                     <ButtonIcon alt="" src={NotificationIcon} />
                 </ButtonContainer>
-                <ButtonContainer margin='0 0 0 10px'>
-                    G
-                </ButtonContainer>
+                <LoginButton openMenu={openMenu}>
+                    <LoginIcon alt="" src={LoginPic} />
+                    <p>Fazer login</p>
+                </LoginButton>
             </HeaderButton>
 
         </Container>
