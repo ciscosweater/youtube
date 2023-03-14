@@ -41,7 +41,7 @@ function Home() {
         },
         {
             imageSrc: "https://i.ytimg.com/vi/4GMbkv6_zXg/mqdefault.jpg",
-            channelImage: "https://yt3.ggpht.com/iMZ1g5W6ds6JEfJ0TAUbvEisvxjRhUDgUFLdmkHg4wgUaJKkH-U0qA6UtPyw_uq2FZjlFrf2NQ=s48-c-k-c0x00ffffff-no-rj",
+            channelImage: "https://yt3.ggpht.com/ytc/AL5GRJWJ7us05kZ_ToyFjaAdrRGRHlYECRJbREG8ol6QdQ=s68-c-k-c0x00ffffff-no-rj",
             title: "YouTube Trumpet Play on YouTube with computer Keyboard",
             profile: "Music With Keyboard",
             stats: "2,5 mi de visualizações - há 1 ano"
