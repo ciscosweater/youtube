@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/youtube/static/css/main.883e9615.css",
-    "main.js": "/youtube/static/js/main.653a65c6.js",
-    "static/media/youtube-logo.png": "/youtube/static/media/youtube-logo.56c8d2c5902dd60de4a7.png",
+    "main.js": "/youtube/static/js/main.f60e88bb.js",
+    "static/media/oldLogo.png": "/youtube/static/media/oldLogo.56c8d2c5902dd60de4a7.png",
     "static/media/sports.png": "/youtube/static/media/sports.b01293696527ddfd26a0.png",
     "static/media/youtube-kids.png": "/youtube/static/media/youtube-kids.c9ee9e66d31d08334ab0.png",
     "static/media/settings.png": "/youtube/static/media/settings.d1118b10847703602e82.png",
+    "static/media/newLogo.png": "/youtube/static/media/newLogo.bcf43f61296aa95770c3.png",
     "static/media/console.png": "/youtube/static/media/console.48960ffaee895a6b5754.png",
     "static/media/login.png": "/youtube/static/media/login.48da524dee9f939382a2.png",
     "static/media/add.png": "/youtube/static/media/add.132696644e79a1f05c3b.png",
@@ -21,10 +22,10 @@
     "static/media/home.png": "/youtube/static/media/home.2c3bbd45926640907cdd.png",
     "index.html": "/youtube/index.html",
     "main.883e9615.css.map": "/youtube/static/css/main.883e9615.css.map",
-    "main.653a65c6.js.map": "/youtube/static/js/main.653a65c6.js.map"
+    "main.f60e88bb.js.map": "/youtube/static/js/main.f60e88bb.js.map"
   },
   "entrypoints": [
     "static/css/main.883e9615.css",
-    "static/js/main.653a65c6.js"
+    "static/js/main.f60e88bb.js"
   ]
 }
