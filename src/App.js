@@ -14,7 +14,7 @@ function App() {
   const { openMenu } = useContext(MenuContext);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Header />
         <div style={{ width: '100%', display: 'flex' }}>
