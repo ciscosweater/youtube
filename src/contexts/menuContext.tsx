@@ -6,12 +6,12 @@ interface IProps {
 }
 
 const MenuContext = createContext<IProps>({
-    openMenu: true,
+    openMenu: false,
     setOpenMenu: () => { }
 });
 
 const MenuStore: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [openMenu, setOpenMenu] = useState(true)
+    const [openMenu, setOpenMenu] = useState(false)
 
     const contextValue: IProps = {
         openMenu,
