@@ -1,6 +1,7 @@
 {
   "name": "youtube",
   "version": "0.1.0",
+  "homepage": "https://ciscosweater.github.io/youtube",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "gh-pages": "^5.0.0"
   }
 }
