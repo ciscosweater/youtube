@@ -26,6 +26,7 @@ import YoutubeKidsIcon from '../../assets/menuIcons/youtube-kids.png';
 import YoutubeMusicIcon from '../../assets/menuIcons/youtube-music.png';
 import YoutubeTvIcon from '../../assets/menuIcons/youtube-tv.png';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../contexts/userContext';
 
 const firstItems = [
     {
@@ -191,6 +192,7 @@ const secondLinks = [
 
 function Menu() {
     const { openMenu } = useContext(MenuContext);
+    const { login } = useContext(UserContext);
     const navigate = useNavigate();
 
     return (
@@ -208,14 +210,20 @@ function Menu() {
                     <span>{element.title}</span>
                 </MenuItem>
             ))}
-            <MenuDiv openMenu={openMenu} />
-            <LoginText openMenu={openMenu}>
-                Faça login para curtir vídeos, comentar e se inscrever.
-            </LoginText>
-            <LoginButton openMenu={openMenu}>
-                <LoginIcon alt="" src={LoginPic} />
-                <p>Fazer login</p>
-            </LoginButton>
+            {login ?
+                null
+                :
+                <>
+                    <MenuDiv openMenu={openMenu} />
+                    <LoginText openMenu={openMenu}>
+                        Faça login para curtir vídeos, comentar e se inscrever.
+                    </LoginText>
+                    <LoginButton openMenu={openMenu} onClick={() => navigate('/login')}>
+                        <LoginIcon alt="" src={LoginPic} />
+                        <p>Fazer login</p>
+                    </LoginButton>
+                </>
+            }
             <MenuDiv openMenu={openMenu} />
             <ExploreTitle openMenu={openMenu} >Explorar</ExploreTitle>
             {exploreItems.map((element) => (

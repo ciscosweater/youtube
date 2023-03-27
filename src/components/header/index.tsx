@@ -9,10 +9,15 @@ import VideoIcon from '../../assets/menuIcons/video.png';
 import NotificationIcon from '../../assets/menuIcons/bell.png';
 import LoginPic from '../../assets/menuIcons/login.png';
 import { MenuContext } from '../../contexts/menuContext';
+import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../contexts/userContext';
 
 function Header() {
+    const navigate = useNavigate();
+
+    const { login, user, logOut } = useContext(UserContext);
     const { openMenu, setOpenMenu } = useContext(MenuContext);
-    const [ currentLogo, setCurrentLogo ] = useState(newLogo);
+    const [currentLogo, setCurrentLogo] = useState(newLogo);
 
     const handleClick = () => {
         setOpenMenu(!openMenu);
@@ -59,10 +64,16 @@ function Header() {
                 <ButtonContainer margin='0 0 0 10px'>
                     <ButtonIcon alt="" src={NotificationIcon} />
                 </ButtonContainer>
-                <LoginButton openMenu={openMenu}>
-                    <LoginIcon alt="" src={LoginPic} />
-                    <p>Fazer login</p>
-                </LoginButton>
+                {login ?
+                    <ButtonContainer margin="0 0 0 10px" onClick={() => logOut()}>
+                        {user.nome.charAt(0).toUpperCase()}
+                    </ButtonContainer>
+                    :
+                    <LoginButton openMenu={openMenu} onClick={() => navigate('/login')} >
+                        <LoginIcon alt="" src={LoginPic} />
+                        <p>Fazer login</p>
+                    </LoginButton>
+                }
             </HeaderButton>
 
         </Container>
