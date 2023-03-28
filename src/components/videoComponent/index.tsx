@@ -4,17 +4,19 @@ import { ChannelImage, Container, ImageBanner, TextCard, TextContainer, Title, T
 function VideoComponent(props: any) {
 
     return (
-        <Container>
-            <ImageBanner src={props.imageSrc} />
-            <TitleContainer>
-                <ChannelImage src={props.channelImage} />
-                <TextContainer>
-                    <Title>{props.title}</Title>
-                    <TextCard>{props.profile}</TextCard>
-                    <TextCard>{props.stats}</TextCard>
-                </TextContainer>
-            </TitleContainer>
-        </Container>
+        <a href={props.link} >
+            <Container>
+                <ImageBanner src={props.imageSrc} />
+                <TitleContainer>
+                    <ChannelImage src={props.channelImage} />
+                    <TextContainer>
+                        <Title>{props.title}</Title>
+                        <TextCard>{props.profile}</TextCard>
+                        <TextCard>{props.stats}</TextCard>
+                    </TextContainer>
+                </TitleContainer>
+            </Container>
+        </a>
     );
 };
 

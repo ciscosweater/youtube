@@ -90,7 +90,7 @@ function Header() {
             </SearchContainer>
 
             <HeaderButton>
-                <ButtonContainer margin='0 0 0 10px'>
+                <ButtonContainer margin='0 0 0 10px' onClick={() => navigate('/upload')}>
                     <ButtonIcon alt="" src={VideoIcon} />
                 </ButtonContainer>
                 <ButtonContainer margin='0 0 0 10px'>

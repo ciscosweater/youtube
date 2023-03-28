@@ -29,15 +29,29 @@ export const UserStorage = ({ children }: any) => {
         window.location.reload();
     };
 
-    const handleLogin = (email: string, password: string) => {
-        api.post('/user/sign-in', { email, password }).then(({ data }) => {
+    const handleLogin = async (email: string, password: string) => {
+        try {
+            const { data } = await api.post('/user/sign-in', { email, password });
             setLogin(true);
             localStorage.setItem('token', data.token);
             setToken(data.token);
             getUser(data.token);
-        }).catch((error) => {
+            return true;
+        } catch (error) {
             console.log('Nao foi possivel fazer o login', error);
-        });
+            return false;
+        }
+    };
+
+    const handleRegister = async (name: string, email: string, password: string) => {
+        try {
+            await api.post('/user/sign-up', { name, email, password });
+            console.log('Cadastro efetuado com sucesso.');
+            return true;
+        } catch (error) {
+            console.log('Nao foi possivel fazer o cadastro.', error);
+            return false;
+        }
     };
 
     return (
@@ -45,6 +59,7 @@ export const UserStorage = ({ children }: any) => {
             login,
             user,
             handleLogin,
+            handleRegister,
             logOut
         }}>
             {children}

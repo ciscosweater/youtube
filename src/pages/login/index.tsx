@@ -42,7 +42,7 @@ function Login() {
                         <RecoverEmail error={error}>Esqueceu seu e-mail?</RecoverEmail>
                         <Message>Não está no seu computador? Use o modo visitante para fazer login com privacidade. </Message>
                         <ButtonsDiv>
-                            <SignUp error={error}>Criar conta</SignUp>
+                            <SignUp error={error} onClick={() => navigate('/signup')}>Criar conta</SignUp>
                             <LoginButton error={error} onClick={handleLoginClick}>Avançar</LoginButton>
                         </ButtonsDiv>
                     </LoginBox>
