@@ -133,3 +133,78 @@ export const LoginIcon = styled.img`
         padding-right: 0px;
     }
 `;
+
+export const DropdownContainer = styled.div`
+  position: relative;
+`;
+
+export const DropdownMenu = styled.div`
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+`;
+
+export const DropdownMenuSection = styled.div`
+    margin: 7.5px 0px;
+`;
+
+export const DropdownMenuItem = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f6f6f6;
+  }
+
+  span {
+    font-size: 14px;
+  }
+`;
+
+export const DropdownMenuIcon = styled.img`
+    width: 18px;
+    margin: 0px 15px 0px 10px;
+`;
+
+export const DropdownUser = styled.div`
+    display: flex;
+    margin: 15px 10px;
+`;
+
+export const UserInfoDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+`;
+
+export const UserName = styled.span`
+    font-size: 16px;
+`;
+
+export const UserEmail = styled.span`
+    font-size: 16px;
+`;
+
+export const UserManage = styled.span`
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #3381ff;
+
+    :hover {
+        color: #2674f2;
+    }
+`;
+
+export const DropdownDivider = styled.div`
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 1px;
+`;
