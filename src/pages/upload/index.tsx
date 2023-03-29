@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../contexts/userContext';
 import newLogo from '../../assets/newLogo.png';
 import { VideoContext } from "../../contexts/videoContext";
+import queryString from "query-string";
 
 function UploadVideo() {
 
@@ -15,14 +16,15 @@ function UploadVideo() {
     const [title, setTitle] = useState('');
     const [profile, setProfile] = useState('');
     const [stats, setStats] = useState('x mil visualizações - há x dias');
-    const [thumblink, setThumblink] = useState('https://img.youtube.com/vi/insiraourldovídeoaqui/maxresdefault.jpg');
     const [channelimage, setChannelImage] = useState('');
-    const [videolink, setVideolink] = useState('https://www.youtube.com/watch?v=insiraourldovídeoaqui');
+    const [videolink, setVideolink] = useState('');
+
+    const videoId = queryString.parseUrl(videolink).query.v
 
     const navigate = useNavigate();
 
     const handleUploadClick = async () => {
-        const success = await uploadVideo(title, profile, stats, thumblink, channelimage, videolink, user.id);
+        const success = await uploadVideo(title, profile, stats, `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`, channelimage, videolink, user.id);
         if (!success) {
             setError(true);
         } else {
@@ -56,7 +58,6 @@ function UploadVideo() {
                     <InputBox
                         error={error}
                         type='text'
-                        placeholder='Counter-strike 2 : RTX 3060 12GB + i5-12400F'
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                     />
@@ -64,7 +65,6 @@ function UploadVideo() {
                     <InputBox
                         error={error}
                         type='text'
-                        placeholder='MiSKY'
                         value={profile}
                         onChange={(e) => setProfile(e.target.value)}
                     />
@@ -75,25 +75,19 @@ function UploadVideo() {
                         value={stats}
                         onChange={(e) => setStats(e.target.value)}
                     />
-                    <InputLabel>Link da imagem de thumbnail do vídeo</InputLabel>
-                    <InputBox
-                        error={error}
-                        type='text'
-                        value={thumblink}
-                        onChange={(e) => setThumblink(e.target.value)}
-                    />
                     <InputLabel>Link da imagem de perfil do canal</InputLabel>
                     <InputBox
                         error={error}
                         type='text'
-                        placeholder='https://yt3.ggpht.com/vjFmoqmjlF_Dbl4OAOV...'
+                        placeholder='https://yt3.ggpht.com/...'
                         value={channelimage}
                         onChange={(e) => setChannelImage(e.target.value)}
                     />
-                    <InputLabel>Link do vídeo em si</InputLabel>
+                    <InputLabel>Link do vídeo</InputLabel>
                     <InputBox
                         error={error}
                         type='text'
+                        placeholder='https://www.youtube.com/watch?v=...'
                         value={videolink}
                         onChange={(e) => setVideolink(e.target.value)}
                     />
