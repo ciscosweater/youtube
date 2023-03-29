@@ -7,6 +7,12 @@ export const Container = styled.div`
     justify-content: space-evenly;
     flex-wrap: wrap;
     row-gap: 40px;
+
+    @media (max-width:1280px) {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
 `;
 
 export const VideoContainer = styled.div`

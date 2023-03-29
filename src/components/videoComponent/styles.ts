@@ -9,7 +9,7 @@ export const Container = styled.div`
     }
 
     @media (max-width: 1280px) {
-        width: 90%;
+        width: 345px;
     }
 `;
 

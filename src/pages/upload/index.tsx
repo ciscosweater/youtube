@@ -34,7 +34,7 @@ function UploadVideo() {
 
     useEffect(() => {
         if (!login) {
-            navigate('/');
+            navigate('/login');
             window.location.reload();
         }
     }, [login, navigate]);

@@ -34,9 +34,9 @@ export const CategoryItem = styled.div<{ isActive: boolean }>`
     padding: 0 10px 2px 10px;
     margin-bottom: 2.5px;
     font-size: 15px;
-}
+    }
 
     :hover {
     background-color: #e5e5e5;
-}
+    }
 `;

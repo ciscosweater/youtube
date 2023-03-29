@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { ButtonContainer, ButtonIcon, Container, LogoContainer, SearchContainer, SearchInputContainer, SearchInput, SearchButton, HeaderButton, LoginButton, LoginIcon, DropdownContainer, DropdownMenu, DropdownMenuItem, DropdownUser, UserInfoDiv, UserName, UserEmail, UserManage, DropdownDivider, DropdownMenuIcon, DropdownMenuSection } from "./styles";
 import HamburguerIcon from '../../assets/menuIcons/hamburger.png';
 import oldLogo from '../../assets/oldLogo.png';
@@ -8,7 +9,6 @@ import MicIcon from '../../assets/menuIcons/mic.png';
 import VideoIcon from '../../assets/menuIcons/video.png';
 import NotificationIcon from '../../assets/menuIcons/bell.png';
 import LoginPic from '../../assets/menuIcons/login.png';
-import SettingsPic from '../../assets/menuIcons/settings.png';
 import UserPic from '../../assets/menuIcons/user.png';
 import LogoutPic from '../../assets/menuIcons/logout.png';
 import { MenuContext } from '../../contexts/menuContext';
@@ -16,11 +16,21 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../contexts/userContext';
 
 function Header() {
+    const useQuery = () => {
+        const { search } = useLocation();
+
+        return React.useMemo(() => new URLSearchParams(search), [search]);
+    };
+
+    const query = useQuery();
+    const searchinput = query.get('input')
+
     const navigate = useNavigate();
 
     const { login, user, logOut } = useContext(UserContext);
     const { openMenu, setOpenMenu } = useContext(MenuContext);
     const [currentLogo, setCurrentLogo] = useState(newLogo);
+    const [search, setSearch] = useState(searchinput ? searchinput as string : '');
 
     const handleClick = () => {
         setOpenMenu(!openMenu);
@@ -28,34 +38,53 @@ function Header() {
 
     const handleLogo = () => {
         if (currentLogo === newLogo) {
-            setCurrentLogo(oldLogo)
+            setCurrentLogo(oldLogo);
+            navigate('/');
         } else {
-            setCurrentLogo(newLogo)
+            setCurrentLogo(newLogo);
+            navigate('/');
         }
+    };
+
+    const handleSearching = () => {
+        if (search !== '') {
+            navigate(`/search/?input=${search}`);
+            window.location.reload();
+        } else {
+            return;
+        }
+    };
+
+    const handleKeySearching = (event: any) => {
+        if (event.keyCode === 13) {
+            handleSearching();
+        };
     };
 
     const options = [
         {
             title: "Seu canal",
             action: () => {
-                navigate('/shorts');
+                navigate('/library');
                 setIsOpen(false);
             },
             icon: UserPic
         },
         {
-            title: "Configurações",
+            title: "Enviar vídeo",
             action: () => {
-                console.log("falaaaaa luisao");
+                navigate('/upload');
                 setIsOpen(false);
             },
-            icon: SettingsPic
+            icon: VideoIcon
         },
         {
             title: "Sair",
             action: () => {
                 logOut();
                 setIsOpen(false);
+                navigate('/');
+                window.location.reload();
             },
             icon: LogoutPic
         }
@@ -79,9 +108,15 @@ function Header() {
 
             <SearchContainer>
                 <SearchInputContainer>
-                    <SearchInput placeholder="Pesquisar" />
+                    <SearchInput
+                        placeholder="Pesquisar"
+                        type="text"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        onKeyDown={handleKeySearching}
+                    />
                 </SearchInputContainer>
-                <SearchButton>
+                <SearchButton onClick={handleSearching}>
                     <ButtonIcon alt="" src={SearchIcon} />
                 </SearchButton>
                 <ButtonContainer margin='0 0 0 10px'>

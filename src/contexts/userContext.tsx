@@ -26,7 +26,6 @@ export const UserStorage = ({ children }: any) => {
         localStorage.removeItem('token');
         setLogin(false);
         setUser({});
-        window.location.reload();
     };
 
     const handleLogin = async (email: string, password: string) => {

@@ -14,6 +14,7 @@ import { UserStorage } from './contexts/userContext';
 import Login from './pages/login';
 import SignUpPage from './pages/signup';
 import { VideoStorage } from './contexts/videoContext';
+import SearchResults from './pages/search';
 
 function App() {
   const { openMenu } = useContext(MenuContext);
@@ -36,6 +37,7 @@ function App() {
                   <Route path='/login' element={<Login />} />
                   <Route path='/signup' element={<SignUpPage />} />
                   <Route path='/upload' element={<UploadVideo />} />
+                  <Route path='/search' element={<SearchResults />} />
                 </Routes>
               </ScreenDiv>
             </div>

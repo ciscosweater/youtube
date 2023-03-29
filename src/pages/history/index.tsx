@@ -1,10 +1,10 @@
-import { Container, HistoryImage, LoginButton, LoginIcon, NotLogged, Subtitle, Title } from "./styles";
+import { Container, HistoryImage, Image, LoginButton, LoginIcon, Message, NotLogged, NotLoggedContainer, Subtitle, Title } from "./styles";
 import HistoryIcon from '../../assets/menuIcons/history.png';
 import LoginPic from '../../assets/menuIcons/login.png';
 import { useNavigate } from "react-router-dom";
 import { useContext } from 'react';
 import { UserContext } from "../../contexts/userContext";
-import TemplateVideoPage from "../../components/templateVideoPage";
+import WrenchPic from "../../assets/wrench.png"
 
 function History() {
     const navigate = useNavigate();
@@ -13,9 +13,10 @@ function History() {
     return (
         <>
             {login ?
-                <Container>
-                    <Title>Em desenvolvimento.</Title>
-                </Container>
+                <NotLoggedContainer>
+                    <Image src={WrenchPic} />
+                    <Message>Em desenvolvimento.</Message>
+                </NotLoggedContainer>
                 :
                 <Container>
                     <NotLogged>

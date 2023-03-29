@@ -36,8 +36,8 @@ export const TitleDiv = styled.div`
 `;
 
 export const TitleIcon = styled.img`
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     margin-right: 15px;
 `;
 
