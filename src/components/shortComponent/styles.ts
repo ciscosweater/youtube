@@ -15,12 +15,6 @@ export const ImageBanner = styled.img<{ openMenu: boolean }>`
     border-radius: 12px;
     padding-bottom: 5px;
 
-    transition: 0.25s;
-
-    :hover {
-        transform: scale(1.02);
-    }
-
     @media (max-width: 1910px) {
         height: 205px;
     }

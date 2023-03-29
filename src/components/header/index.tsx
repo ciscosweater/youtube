@@ -133,13 +133,13 @@ function Header() {
                 </ButtonContainer>
                 {login ?
                     <DropdownContainer>
-                        <ButtonContainer margin="0 0 0 10px" onClick={() => setIsOpen(!isOpen)}>
+                        <ButtonContainer style={{ "border": "1px solid #c0c0c0" }} margin="0 0 0 10px" onClick={() => setIsOpen(!isOpen)}>
                             {user.nome.charAt(0).toUpperCase()}
                         </ButtonContainer>
                         {isOpen && (
                             <DropdownMenu>
                                 <DropdownUser>
-                                    <ButtonContainer>
+                                    <ButtonContainer style={{ "border": "1px solid #c0c0c0" }}>
                                         {user.nome.charAt(0).toUpperCase()}
                                     </ButtonContainer>
                                     <UserInfoDiv>
